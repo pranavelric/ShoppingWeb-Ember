@@ -2,7 +2,7 @@
 
     {{!-- header --}}
     <section>
-        <h3>Beats Solo Wireless Headphones</h3>
+        <h3>{{@name}}</h3>
         <div class="text-warning">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -16,16 +16,19 @@
     {{!-- Price --}}
 
     <section>
-        <del class="small text-black-50">$199.95</del>
-        <i class="text-danger fw-bold">$99</i>
+        <del class="small text-black-50">{{@price.original}}</del>
+        <i class="text-danger fw-bold">{{@price.current}}</i>
     </section>
 
 
     <div>
         <h5>Color</h5>
         <div class="product-colors active-{{@color}}">
-            <span class="product-color color-red" {{on "click" (fn @changeColor "red" )}}></span>
-            <span class="product-color color-black" {{on "click" (fn @changeColor "black" )}}></span>
+            {{#each @colors as |color|}}
+            <span class="product-color {{concat 'color-' color.color}}" {{on "click" (fn @changeColor color.color
+                )}}></span>
+
+            {{/each}}
 
         </div>
     </div>

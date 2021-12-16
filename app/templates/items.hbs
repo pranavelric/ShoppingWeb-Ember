@@ -4,20 +4,19 @@
 
     <div class="product item-details-page">
         <Product::Image @src={{this.productImage}} />
-        <Product::Details @color={{this.color}} @changeColor={{this.changeColor}} />
+        <Product::Details 
+        @name={{this.model.name}}
+         @price={{this.mode.price}} 
+        @colors={{this.model.colors}}
+            @color={{this.color}}
+             @changeColor={{this.changeColor}} />
     </div>
 
     <h5 class="mt-5">Features</h5>
     <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab reiciendis, nisi minus nihil molestias, error
-            !</li>
-        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio voluptatibus excepturi impedit deleniti
-        </li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, culpa?</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, culpa?</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, culpa?</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, culpa?</li>
-
+        {{#each this.model.features as |feature|}}
+        <li>{{feature}}</li>
+        {{/each}}
     </ul>
 
 </GeneralContainer>
