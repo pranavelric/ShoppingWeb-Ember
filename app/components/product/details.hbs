@@ -23,17 +23,24 @@
 
     {{#if @isDetails}}
 
+    <div class="d-flex justify-content-between align-items-end">
 
-    <div>
-        <h5>Color</h5>
-        <div class="product-colors active-{{@color}}">
-            {{#each @colors as |color|}}
-            <span class="product-color {{concat 'color-' color.color}}" {{on "click" (fn @changeColor color.color
-                )}}></span>
+        <div>
+            <h5>Color</h5>
+            <div class="product-colors active-{{@color}}">
+                {{#each @colors as |color|}}
+                <span class="product-color {{concat 'color-' color.color}}" {{on "click" (fn @changeColor color.color
+                    )}}></span>
 
-            {{/each}}
+                {{/each}}
 
+            </div>
         </div>
+
+        <button class="btn btn-info" type="button" {{on "click" this.addToCart}}>
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+        </button>
     </div>
     {{/if}}
 

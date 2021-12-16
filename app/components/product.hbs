@@ -1,4 +1,4 @@
 <LinkTo @route="items" @model={{@product.id}} class="product">
-    <Product::Image @src={{this.productImage}} />
+    <Product::Image @src={{this.productImage}} @toggleZoom={{this.toggleZoom}} />
     <Product::Details @name={{@product.name}} @price={{@product.price}} />
 </LinkTo>

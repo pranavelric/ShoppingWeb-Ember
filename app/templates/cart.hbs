@@ -10,6 +10,14 @@
     </ol>
 
 
+    {{#each cart.itemlist as |c|}}
+    <div class="d-flex align-items-center">
+        <h4>{{c.name}}</h4>
+
+    </div>
+    {{/each}}
+
+
     <section class="w-50 ms-auto text-end mb-5">
 
         <div class="row">
