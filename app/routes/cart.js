@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-
+import { action } from '@ember/object';
 export default class CartRoute extends Route {
   model() {
     const items = [{ price: 10 }, { price: 15 }];
@@ -14,4 +14,7 @@ export default class CartRoute extends Route {
   //     controller.set('subtotal', subtotal)
 
   // }
+
+
+
 }

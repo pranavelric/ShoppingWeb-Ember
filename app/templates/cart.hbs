@@ -11,8 +11,18 @@
 
 
     {{#each cart.itemlist as |c|}}
-    <div class="d-flex align-items-center">
-        <h4>{{c.name}}</h4>
+    <div class="cart-item d-flex align-items-space-between">
+        <div class="cart-item-thumbnail">
+            <img src={{c.image}} alt="">
+        </div>
+
+        <div class="ms-3">
+            <h5>{{c.name}}</h5>
+            <h6>{{currency c.price}}</h6>
+        </div>
+
+        <input type="number" class="ms-auto" value={{c.count}} {{on "input" (fn this.updateItemCount c) }}>
+
 
     </div>
     {{/each}}
