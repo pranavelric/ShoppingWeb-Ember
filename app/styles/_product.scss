@@ -8,7 +8,7 @@
 
     img{
         height: 100%;
-
+width: 100%;
     }
 }
 .product-details{
@@ -49,6 +49,7 @@ justify-content: space-between;
         background: red;
     }
     &.color-black{
+
         background: black;
     }
 
@@ -79,6 +80,17 @@ justify-content: space-between;
     &:hover{
         text-decoration: none;
         color: black;
+    }
+
+
+    &.is-zoomed{
+        .product-image{
+            width: 100%;
+        }
+        .product-details{
+            width: 0;
+            padding: 0;
+        }
     }
 
 
