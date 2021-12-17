@@ -14,7 +14,4 @@ export default class CartRoute extends Route {
   //     controller.set('subtotal', subtotal)
 
   // }
-
-
-
 }
